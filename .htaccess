@@ -12,6 +12,7 @@ SetEnvIfNoCase User-Agent "^libwww-perl" bad_bot
 Order Allow,Deny
 Allow from all
 deny from 38.100.19.8/29
+deny from 188.165.192.0/18
 deny from 38.100.21.0/24
 deny from 38.100.41.64/26
 deny from 38.105.71.0/25
