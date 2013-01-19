@@ -6,8 +6,8 @@ But we can at least make them work for it. Novice scrapers give up when they
 run into too many roadblocks or problems.
 
 Blocks:
-- Proxies without high anonymity
-- Command-line tools
+- Leaky proxies
+- Command-line tools & frameworks
 - Empty useragent strings
 - Known proxy networks
 - Known scraper subnets
