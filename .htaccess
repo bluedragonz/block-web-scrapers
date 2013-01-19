@@ -2,11 +2,11 @@ Options All -Indexes
 RewriteEngine on
 
 # Block Web Scrapers
-SetEnvIfNoCase User-Agent ^$ bad_bot
-SetEnvIfNoCase User-Agent "^httplib" bad_bot
-SetEnvIfNoCase User-Agent "^Curl" bad_bot
-SetEnvIfNoCase User-Agent "^Wget" bad_bot
-SetEnvIfNoCase User-Agent "^libwww-perl" bad_bot
+SetEnvIfNoCase User-Agent ^$ scraper_bot
+SetEnvIfNoCase User-Agent "^httplib" scraper_bot
+SetEnvIfNoCase User-Agent "^Curl" scraper_bot
+SetEnvIfNoCase User-Agent "^Wget" scraper_bot
+SetEnvIfNoCase User-Agent "^libwww-perl" scraper_bot
 
 <Limit GET POST HEAD>
 order allow,deny
