@@ -6,9 +6,10 @@ But we can at least make them work for it, and novice scrapers usually give up
 when they run into too many roadblocks.
 
 Blocks:
-- Command-line tool useragents
+- Proxies without high anonymity (they leak their presence)
+- Command-line tools
 - Empty useragents
-- Known proxies
+- Known proxy subnets
 - Known scraper subnets
 - Amazon EC2
 
