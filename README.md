@@ -10,3 +10,4 @@ Blocks:
 - Empty useragents
 - Known proxy subnets
 - Known scraper subnets
+- Amazon EC2
