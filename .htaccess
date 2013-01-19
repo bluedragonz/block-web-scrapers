@@ -21,6 +21,7 @@ SetEnvIfNoCase User-Agent "^libwww-perl" scraper_bot
 SetEnvIfNoCase User-Agent "HttpClient" scraper_bot
 SetEnvIfNoCase User-Agent "^libcurl" scraper_bot
 SetEnvIfNoCase User-Agent "^Snoopy" scraper_bot
+SetEnvIfNoCase User-Agent "pycurl" scraper_bot
 
 
 <Limit GET POST HEAD>
