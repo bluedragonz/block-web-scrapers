@@ -89,5 +89,5 @@ deny from 207.210.192.0/18
 deny from 208.110.68.144/29
 deny from 96.47.225.0/24
 
-Deny from env=bad_bot
+Deny from env=scraper_bot
 </Limit>
