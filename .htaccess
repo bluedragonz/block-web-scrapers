@@ -18,6 +18,9 @@ SetEnvIfNoCase User-Agent "^httplib" scraper_bot
 SetEnvIfNoCase User-Agent "^Curl" scraper_bot
 SetEnvIfNoCase User-Agent "^Wget" scraper_bot
 SetEnvIfNoCase User-Agent "^libwww-perl" scraper_bot
+SetEnvIfNoCase User-Agent "HttpClient" scraper_bot
+SetEnvIfNoCase User-Agent "^libcurl" scraper_bot
+SetEnvIfNoCase User-Agent "^Snoopy" scraper_bot
 
 <Limit GET POST HEAD>
 order allow,deny
