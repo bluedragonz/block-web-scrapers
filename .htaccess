@@ -12,7 +12,7 @@ RewriteCond %{HTTP:HTTP_PC_REMOTE_ADDR} !^$ [OR]
 RewriteCond %{HTTP:HTTP_CLIENT_IP} !^$
 RewriteRule ^(.*)$ – [F]
 
-# Block Tools & Frameworks
+# Block Command-line & Frameworks
 SetEnvIfNoCase User-Agent ^$ scraper_bot
 SetEnvIfNoCase User-Agent "^httplib" scraper_bot
 SetEnvIfNoCase User-Agent "^Curl" scraper_bot
