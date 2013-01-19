@@ -1,7 +1,18 @@
 Options All -Indexes
 RewriteEngine on
 
-# Block Web Scrapers
+# Block Proxies
+RewriteCond %{HTTP:VIA} !^$ [OR]
+RewriteCond %{HTTP:FORWARDED} !^$ [OR]
+RewriteCond %{HTTP:USERAGENT_VIA} !^$ [OR]
+RewriteCond %{HTTP:X_FORWARDED_FOR} !^$ [OR]
+RewriteCond %{HTTP:PROXY_CONNECTION} !^$ [OR]
+RewriteCond %{HTTP:XPROXY_CONNECTION} !^$ [OR]
+RewriteCond %{HTTP:HTTP_PC_REMOTE_ADDR} !^$ [OR]
+RewriteCond %{HTTP:HTTP_CLIENT_IP} !^$
+RewriteRule ^(.*)$ – [F]
+
+# Block Command-line Tools
 SetEnvIfNoCase User-Agent ^$ scraper_bot
 SetEnvIfNoCase User-Agent "^httplib" scraper_bot
 SetEnvIfNoCase User-Agent "^Curl" scraper_bot
@@ -37,7 +48,7 @@ deny from 184.169.128.0/17
 deny from 204.236.128.0/17
 deny from 216.182.224.0/20
 
-# Aggressively block proxies
+# Aggressively Block Proxies
 deny from 38.100.19.8/29
 deny from 188.165.192.0/18
 deny from 38.100.21.0/24
