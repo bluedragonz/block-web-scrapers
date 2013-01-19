@@ -7,8 +7,8 @@ when they run into too many roadblocks.
 
 Blocks:
 - Proxies without high anonymity (they leak their presence)
-- Command-line tools
-- Empty useragents
+- Command-line tools used for scraping
+- Empty useragent strings
 - Known proxy subnets
 - Known scraper subnets
 - Amazon EC2
