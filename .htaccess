@@ -1,7 +1,7 @@
 Options All -Indexes
 RewriteEngine on
 
-# Block Proxies
+# Block Leaky Proxies
 RewriteCond %{HTTP:VIA} !^$ [OR]
 RewriteCond %{HTTP:FORWARDED} !^$ [OR]
 RewriteCond %{HTTP:USERAGENT_VIA} !^$ [OR]
@@ -12,7 +12,7 @@ RewriteCond %{HTTP:HTTP_PC_REMOTE_ADDR} !^$ [OR]
 RewriteCond %{HTTP:HTTP_CLIENT_IP} !^$
 RewriteRule ^(.*)$ – [F]
 
-# Block Command-line Tools
+# Block Tools & Frameworks
 SetEnvIfNoCase User-Agent ^$ scraper_bot
 SetEnvIfNoCase User-Agent "^httplib" scraper_bot
 SetEnvIfNoCase User-Agent "^Curl" scraper_bot
@@ -21,6 +21,7 @@ SetEnvIfNoCase User-Agent "^libwww-perl" scraper_bot
 SetEnvIfNoCase User-Agent "HttpClient" scraper_bot
 SetEnvIfNoCase User-Agent "^libcurl" scraper_bot
 SetEnvIfNoCase User-Agent "^Snoopy" scraper_bot
+
 
 <Limit GET POST HEAD>
 order allow,deny
