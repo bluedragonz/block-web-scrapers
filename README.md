@@ -27,3 +27,5 @@ can comment out that portion of the htaccess file to prevent any issues.
 Some proxies leak HTTP header information that can be used to confirm their
 presence. Blocking transparent proxies could cause some issues for people
 visiting through a caching proxy, which is why this is disabled by default.
+Poor countries are the typical user of caching proxies, but some corporate
+setups use them as well.
