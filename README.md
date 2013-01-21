@@ -19,7 +19,7 @@ Blocks:
 Several frequently abused hosts are blocked, but there is little reason
 for servers on their networks to be visiting your website in the first place.
 If you use Amazon EC2 or a third party service that relies on Amazon EC2, you
-should remove that portion of the htaccess file to prevent any issues.
+can comment out that portion of the htaccess file to prevent any issues.
 
 
 [ Transparent Proxies  ]
