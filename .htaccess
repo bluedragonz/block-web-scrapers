@@ -24,6 +24,8 @@ SetEnvIfNoCase User-Agent "^Snoopy" scraper_bot
 SetEnvIfNoCase User-Agent "^Ruby" scraper_bot
 SetEnvIfNoCase User-Agent "pycurl" scraper_bot
 
+# Other
+SetEnvIfNoCase User-Agent "Aboundex" scraper_bot
 
 <Limit GET POST HEAD>
 order allow,deny
